@@ -67,6 +67,7 @@ def insertionSort(nums: list) -> list:
 
 # Merge 2 Sorted Arrays into a single sorted array
 
+
 # Best Case Time Complexity - O(N+M)
 # Worst Case Time Complexity - O(N+M)
 # Space Complexity - O(N+M)
@@ -94,3 +95,81 @@ def mergeSortedArrays(arr1: list, arr2: list) -> list:
         i += 1
 
     return sortedArr
+
+
+# Merge Sort
+
+
+# Best Case Time Complexity - O(NLog(N))
+# Worst Case Time Complexity - O(NLog(N))
+# Space Complexity - O(N)
+def merge(arr, low, mid, high):
+    left = arr[low : mid + 1]
+    right = arr[mid + 1 : high + 1]
+    m, n = len(left), len(right)
+    i = j = 0
+    k = low
+
+    # print("merging -> ", arr[low:high])
+
+    while i < m and j < n:
+        if left[i] < right[j]:
+            arr[k] = left[i]
+            k += 1
+            i += 1
+        else:
+            arr[k] = right[j]
+            j += 1
+            k += 1
+
+    while i < m:
+        arr[k] = left[i]
+        k += 1
+        i += 1
+
+    while j < n:
+        arr[k] = right[j]
+        k += 1
+        j += 1
+
+    return arr
+
+
+def merge_sort_util(arr, low, high):
+    # print(low, high)
+    if low < high:
+        mid = (low + high) // 2  # [1,3,2,7,0]
+        merge_sort_util(arr, low, mid) # [1,3]
+        merge_sort_util(arr, mid + 1, high) # [2,7,0]
+
+        return merge(arr, low, mid, high)
+
+
+def merge_sort(arr):
+    return merge_sort_util(arr, 0, len(arr) - 1)
+
+# Quick Sort
+
+# Best Case Time Complexity - O(NLog(N))
+# Worst Case Time Complexity - O(N^2)
+# Space Complexity - O(1)
+
+def partition(arr, left, right):
+    pivot = arr[right]
+    pI = left
+
+    # print("prev -> ",arr)
+    for i in range(left, right):
+        if arr[i] <= pivot:
+            arr[pI], arr[i] = arr[i], arr[pI]
+            pI += 1
+    arr[pI], arr[right] = arr[right], arr[pI]
+    # print("after -> ", arr)
+    return pI
+
+
+def quickSort(arr, left, right):
+    if left < right:
+        partitionIndex = partition(arr, left, right)
+        quickSort(arr, left, partitionIndex - 1)
+        quickSort(arr, partitionIndex + 1, right)

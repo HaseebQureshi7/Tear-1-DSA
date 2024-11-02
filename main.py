@@ -20,6 +20,9 @@ def main():
     lowerCaseString = "letter"
     lowerCaseString2 = "ettler"
 
+    overlapping2DArray = [[1,3],[2,5],[1,6],[5,7],[7,10]]
+    nonOverlapping2DArray = [[1,3],[3,5],[6,8],[9,10],[10,12]]
+
     # print(arrays.problems.FindFrequencyOfKInArray(sortedArrayWithDuplicates, k))
     # res = arrays.problems.FindMinOfReverseSortedArrayWithLinearSearch(reversedSortedArray)
     # res = arrays.problems.FindMinOfReveredArrayWithBinarySearch(reversedSortedArray)
@@ -41,7 +44,16 @@ def main():
     # res = sorting.segregate01(binaryArray)
     # res = sorting.segregate012(ternaryArray)
     # res = sortingAlgos.insertionSort(unsortedArray)
-    res = sortingAlgos.mergeSortedArrays([1,3,6,8,14,20,22], [2,4,5,7])
+    # res = sortingAlgos.mergeSortedArrays([1,3,6,8,14,20,22], [2,4,5,7])
+    # res = sortingAlgos.merge_sort(unsortedArray)
+    # print(unsortedArray)
+    # res = sortingAlgos.quickSort(unsortedArray, 0, len(unsortedArray) - 1)
+    # res = sorting.twoSumInUnsortedArr([1, 7, -2, 5, -7, 2, -3, -7, 7, -2], 5)
+    # res = sorting.twoSumWithDuplicates([1, 7, -2, 5, -7, 2, -3, -7, 7, -2], 5)
+    # res = sorting.twoSumWithDuplicates2([1, 7, -2, 5, -7, 2, -3, -7, 7, -2], 5)
+    # res = sorting.hasOverlap(overlapping2DArray)
+    # res = sorting.canAttendMeetings(nonOverlapping2DArray)
+    res = sorting.mergeOverlappingIntervals([[1,5], [6,10], [11,12], [13,14]])
     print(res)
 
 
