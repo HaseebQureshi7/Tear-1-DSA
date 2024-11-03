@@ -4,6 +4,8 @@ import recursion.problems
 import hashing.problems as hash
 import sorting.alg as sortingAlgos
 import sorting.problems as sorting
+import linked_list.DS as linkedListDs
+import linked_list.problems as linkedListProblems
 
 
 def main():
@@ -20,8 +22,8 @@ def main():
     lowerCaseString = "letter"
     lowerCaseString2 = "ettler"
 
-    overlapping2DArray = [[1,3],[2,5],[1,6],[5,7],[7,10]]
-    nonOverlapping2DArray = [[1,3],[3,5],[6,8],[9,10],[10,12]]
+    overlapping2DArray = [[1, 3], [2, 5], [1, 6], [5, 7], [7, 10]]
+    nonOverlapping2DArray = [[1, 3], [3, 5], [6, 8], [9, 10], [10, 12]]
 
     # print(arrays.problems.FindFrequencyOfKInArray(sortedArrayWithDuplicates, k))
     # res = arrays.problems.FindMinOfReverseSortedArrayWithLinearSearch(reversedSortedArray)
@@ -53,8 +55,21 @@ def main():
     # res = sorting.twoSumWithDuplicates2([1, 7, -2, 5, -7, 2, -3, -7, 7, -2], 5)
     # res = sorting.hasOverlap(overlapping2DArray)
     # res = sorting.canAttendMeetings(nonOverlapping2DArray)
-    res = sorting.mergeOverlappingIntervals([[1,5], [6,10], [11,12], [13,14]])
-    print(res)
+    # res = sorting.mergeOverlappingIntervals([[1,5], [6,10], [11,12], [13,14]])
+    # lList = linkedListDs.LinkedList()
+    # lList.add(5)
+    # lList.add(3)
+    # lList.add(1)
+    # lList.removeHead()
+    # print(lList.contains(6))
+    # lList.pop()
+    # lList.addToFront(0)
+    # lList.removeNode(1)
+    # lList.printList()
+    # print(lList.count)
+    newList = linkedListProblems.createListWithArray([1, 2, 3, 4])
+    # print(newList.value)
+    linkedListProblems.printReveredLinkedList(newList)
 
 
 if __name__ == "__main__":
