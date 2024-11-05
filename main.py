@@ -25,6 +25,16 @@ def main():
     overlapping2DArray = [[1, 3], [2, 5], [1, 6], [5, 7], [7, 10]]
     nonOverlapping2DArray = [[1, 3], [3, 5], [6, 8], [9, 10], [10, 12]]
 
+    headNode = linkedListDs.Node(1)
+    n2 = linkedListDs.Node(2)
+    n3 = linkedListDs.Node(3)
+    n4 = linkedListDs.Node(4)
+
+    headNode.next = n2
+    n2.next = n3
+    n3.next = n4
+    n4.next = None
+
     # print(arrays.problems.FindFrequencyOfKInArray(sortedArrayWithDuplicates, k))
     # res = arrays.problems.FindMinOfReverseSortedArrayWithLinearSearch(reversedSortedArray)
     # res = arrays.problems.FindMinOfReveredArrayWithBinarySearch(reversedSortedArray)
@@ -67,9 +77,25 @@ def main():
     # lList.removeNode(1)
     # lList.printList()
     # print(lList.count)
-    newList = linkedListProblems.createListWithArray([1, 2, 3, 4])
+    # newList = linkedListProblems.createListWithArray([1, 2, 3, 4, 5])
     # print(newList.value)
-    linkedListProblems.printReveredLinkedList(newList)
+    # linkedListProblems.printReveredLinkedList(newList)
+    # reversedList = linkedListProblems.reverseLinkedList(newList)
+    # finalNode = newList.next.next.next
+    # linkedListProblems.deleteNodeFromLinkedList(finalNode)
+    # linkedListProblems.printLinkedList(newList)
+    # res = linkedListProblems.returnMiddleNodeInLinkedListNAIVE(newList)
+    # res = linkedListProblems.breakLinkedList(newList)
+    # print(res[0].value, res[1].value)
+
+    # print(linkedListProblems.hasCycle(headNode))
+    # list1 = linkedListProblems.createListWithArray([1, 2, 3])
+    # list2 = linkedListProblems.createListWithArray([4, 5, 6, 12,24,132,1])
+    # res = linkedListProblems.removeNthFromReverse(headNode, 2)
+    # res = linkedListProblems.mergeLinkedListsInAscendingOrder(list1, list2)
+    # linkedListProblems.printLinkedList(res)
+    res = hash.threeSum([1,2,3,5,6,0,4],6)
+    print(res)
 
 
 if __name__ == "__main__":

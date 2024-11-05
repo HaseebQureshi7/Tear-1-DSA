@@ -154,6 +154,7 @@ def twoSumNaive(arr, k):
 
 # Optmized Appraoch
 
+
 # Best Case Time Complexity - O(N)
 # Worst Case Time Complexity - O(N)
 def twoSumOptimized(arr, k):
@@ -161,7 +162,46 @@ def twoSumOptimized(arr, k):
 
     for el in arr:
         elementToFind = k - el
-        if (elementToFind in cache): # this is O(1) TC because of hashing (Reduces Overall TC)
-            return (el, elementToFind) # Returning indexes instead of True
-        cache.add(el) # Adding to cache after checking prevents one element to add up twice.
+        if (
+            elementToFind in cache
+        ):  # this is O(1) TC because of hashing (Reduces Overall TC)
+            return (el, elementToFind)  # Returning indexes instead of True
+        cache.add(
+            el
+        )  # Adding to cache after checking prevents one element to add up twice.
     return False
+
+
+# Find if 3 of the elements in the array adds up to k and return all possible combinations
+
+# Appraoch
+# using 3 pointers, 1->left+1, 2->len(arr), 3->mid and move them back and forth
+
+
+# Best Case Time Complexity - O(N^2)
+# Worst Case Time Complexity - O(N^2)
+def threeSum(arr, k):
+    arr.sort()
+    res = []
+
+    for i in range(len(arr) - 2):
+        low, high = i + 1, len(arr) - 1
+        if i > 0 and arr[i] == arr[i - 1]:
+            continue
+        while low < high:
+            sum = arr[i] + arr[low] + arr[high]
+            if k > sum:
+                low += 1
+            elif k < sum:
+                high -= 1
+            else:
+                res.append([arr[i], arr[low], arr[high]])
+                while low < high and arr[low] == arr[low + 1]:
+                    low += 1
+                while low < high and arr[high] == arr[high - 1]:
+                    high -= 1
+
+                low += 1
+                high -= 1
+
+    return res
