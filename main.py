@@ -6,6 +6,8 @@ import sorting.alg as sortingAlgos
 import sorting.problems as sorting
 import linked_list.DS as linkedListDs
 import linked_list.problems as linkedListProblems
+import stack.DS as stackDs
+import stack.problems as stackProblems
 
 
 def main():
@@ -34,6 +36,9 @@ def main():
     n2.next = n3
     n3.next = n4
     n4.next = None
+
+    validParantheses = "[{()}]"
+    invalidParantheses = "[{()]}"
 
     # print(arrays.problems.FindFrequencyOfKInArray(sortedArrayWithDuplicates, k))
     # res = arrays.problems.FindMinOfReverseSortedArrayWithLinearSearch(reversedSortedArray)
@@ -94,7 +99,36 @@ def main():
     # res = linkedListProblems.removeNthFromReverse(headNode, 2)
     # res = linkedListProblems.mergeLinkedListsInAscendingOrder(list1, list2)
     # linkedListProblems.printLinkedList(res)
-    res = hash.threeSum([1,2,3,5,6,0,4],6)
+    # res = hash.threeSum([1,2,3,5,6,0,4],6)
+    # print(res)
+    
+    # stack = stackDs.Stack()   # 3 Variations of Stack
+    # stack = stackDs.LLStack()
+    # stack = stackDs.DqStack()
+    # stack = stackDs.MinStack()
+    # stack.push(1)
+    # stack.push(2)
+    # stack.push(3)
+    # stack.push(0)
+    # stack.push(5)
+    # for i in range(411):
+    #     stack.push(i)
+
+    # res = stack.peek()
+    # print(res)
+    # print(stack.pop())
+    
+    # stackSize = stack.size()
+    # for i in range(stackSize):
+    #     print(stack.pop())
+    # stack.pop()
+
+    # res = stackProblems.validParentheses("}}}}")
+    # res = stackProblems.removeAdjacentDuplicates("aabbac")
+    # res = stackProblems.nextWarmDay([73,74,76,71,69,79,73])
+    # res = stackProblems.evaluatePrefix("*+-1234")
+    # res = stackProblems.evaluatePrefix("-*+12354")
+    res = stackProblems.infixToPostfix("A+B*C+D/E")
     print(res)
 
 
