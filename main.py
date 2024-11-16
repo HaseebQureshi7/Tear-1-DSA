@@ -8,6 +8,7 @@ import linked_list.DS as linkedListDs
 import linked_list.problems as linkedListProblems
 import stack.DS as stackDs
 import stack.problems as stackProblems
+import Queue.DS as queueDs
 
 
 def main():
@@ -101,7 +102,7 @@ def main():
     # linkedListProblems.printLinkedList(res)
     # res = hash.threeSum([1,2,3,5,6,0,4],6)
     # print(res)
-    
+
     # stack = stackDs.Stack()   # 3 Variations of Stack
     # stack = stackDs.LLStack()
     # stack = stackDs.DqStack()
@@ -117,7 +118,7 @@ def main():
     # res = stack.peek()
     # print(res)
     # print(stack.pop())
-    
+
     # stackSize = stack.size()
     # for i in range(stackSize):
     #     print(stack.pop())
@@ -128,7 +129,17 @@ def main():
     # res = stackProblems.nextWarmDay([73,74,76,71,69,79,73])
     # res = stackProblems.evaluatePrefix("*+-1234")
     # res = stackProblems.evaluatePrefix("-*+12354")
-    res = stackProblems.infixToPostfix("A+B*C+D/E")
+    # res = stackProblems.infixToPostfix("A+B*C+D/E")
+
+    queue = queueDs.Queue()
+
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.enqueue(3)
+    queue.enqueue(4)
+
+    res = queue.dequeue()
+
     print(res)
 
 
