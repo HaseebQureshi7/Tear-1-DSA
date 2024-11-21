@@ -9,7 +9,8 @@ import linked_list.problems as linkedListProblems
 import stack.DS as stackDs
 import stack.problems as stackProblems
 import Queue.DS as queueDs
-
+import trees.DS as treeDs
+import trees.alg as treeAlgos
 
 def main():
     k = 5
@@ -131,16 +132,77 @@ def main():
     # res = stackProblems.evaluatePrefix("-*+12354")
     # res = stackProblems.infixToPostfix("A+B*C+D/E")
 
-    queue = queueDs.Queue()
+    # queue = queueDs.Queue()
 
-    queue.enqueue(1)
-    queue.enqueue(2)
-    queue.enqueue(3)
-    queue.enqueue(4)
+    # queue.enqueue(1)
+    # queue.enqueue(2)
+    # queue.enqueue(3)
+    # queue.enqueue(4)
 
-    res = queue.dequeue()
+    # res = queue.dequeue()
 
-    print(res)
+    # print(res)
+
+    # bst = treeDs.RecursiveBST()
+    bst = treeDs.BST()
+    bst.add(5)
+    bst.add(3)
+    bst.add(7)
+    bst.add(2)
+    bst.add(4)
+    bst.add(10)
+    bst.add(15)
+    
+    bst2 = treeDs.BST()
+    bst2.add(5)
+    bst2.add(2)
+    bst2.add(7)
+    bst2.add(1)
+    bst2.add(3)
+    bst2.add(6)
+    bst2.add(8)
+
+
+    # print(bst.root)
+    # treeAlgos.preorder(bst.root)
+    # treeAlgos.inorder(bst.root)
+    # treeAlgos.postorder(bst.root)
+    # print(bst.length())
+    # print(bst.contains(bst.root, 8))
+
+    # res = treeAlgos.findMin(bst.root)
+    # res = treeAlgos.findMinWithRecursion(bst.root)
+
+    # res = treeAlgos.findMax(bst.root)
+    # res = treeAlgos.findMaxWithRecursion(bst.root)
+
+    # res = treeAlgos.heightOfBinTreeIterative(bst.root)
+    # res = treeAlgos.heightOfBinTree(bst.root)
+
+    # res = treeAlgos.isBalanced(bst.root)
+
+    # res = treeAlgos.countLeaves(bst.root)
+
+    # res = treeAlgos.areIdentical(bst.root, bst2.root)
+    # print(bst.root.left.val, bst.root.right.val)
+    # treeAlgos.invertBinTree(bst.root)
+    # print(bst.root.left.val, bst.root.right.val)
+
+    # treeAlgos.levelOrderTraversal(bst.root)
+    # res = treeAlgos.printLevels(bst.root)
+    # res = treeAlgos.printLeftView(bst.root)
+    # res = treeAlgos.printSpiralOrder(bst.root)
+    # res = treeAlgos.spiralOrderWithLOT(bst.root)
+
+    # res = treeAlgos.printVerticalOrder(bst.root)
+    # res = treeAlgos.printTopView(bst.root)
+    # res = treeAlgos.deleteFromTree(bst.root,3)
+
+    # treeAlgos.levelOrderTraversal(res)
+    # treeAlgos.printFormattedTree(res)
+    # print(res)
+
+    print(treeAlgos.maxDepth(bst.root))
 
 
 if __name__ == "__main__":
