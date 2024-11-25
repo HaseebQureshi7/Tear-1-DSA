@@ -11,6 +11,8 @@ import stack.problems as stackProblems
 import Queue.DS as queueDs
 import trees.DS as treeDs
 import trees.alg as treeAlgos
+import heap.DS as heapDs
+import heap.alg as heapAlgos
 
 def main():
     k = 5
@@ -202,7 +204,21 @@ def main():
     # treeAlgos.printFormattedTree(res)
     # print(res)
 
-    print(treeAlgos.maxDepth(bst.root))
+    # print(treeAlgos.maxDepth(bst.root))
+    minHeap = heapDs.MinHeap()
+    minHeap.add(10)
+    minHeap.add(20)
+    minHeap.add(5)
+    minHeap.add(-1)
+    minHeap.add(40)
+
+    # print(minHeap.data)
+    # while not minHeap.isEmpty():
+    #     print(minHeap.remove())
+
+    res = heapAlgos.kthLargertElement([1,4,0,8,9,5], 3)
+    print(res)
+
 
 
 if __name__ == "__main__":
