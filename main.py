@@ -13,6 +13,7 @@ import trees.DS as treeDs
 import trees.alg as treeAlgos
 import heap.DS as heapDs
 import heap.alg as heapAlgos
+import matrix.alg as matrixAlgos
 
 def main():
     k = 5
@@ -205,18 +206,22 @@ def main():
     # print(res)
 
     # print(treeAlgos.maxDepth(bst.root))
-    minHeap = heapDs.MinHeap()
-    minHeap.add(10)
-    minHeap.add(20)
-    minHeap.add(5)
-    minHeap.add(-1)
-    minHeap.add(40)
+    # minHeap = heapDs.MinHeap()
+    # minHeap.add(10)
+    # minHeap.add(20)
+    # minHeap.add(5)
+    # minHeap.add(-1)
+    # minHeap.add(40)
 
     # print(minHeap.data)
     # while not minHeap.isEmpty():
     #     print(minHeap.remove())
 
-    res = heapAlgos.kthLargertElement([1,4,0,8,9,5], 3)
+    # res = heapAlgos.kthLargertElement([1,4,0,8,9,5], 3)
+    # res = matrixAlgos.searchIn2DArray(nonOverlapping2DArray, 1)
+    # res = matrixAlgos.searchIn2DArray([[1,2,3], [4,5,6]], 1)
+    # res = matrixAlgos.setMatrixZeros([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
+    res = matrixAlgos.rotateImage([[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]])
     print(res)
 
 
