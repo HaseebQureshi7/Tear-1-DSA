@@ -14,6 +14,12 @@ import trees.alg as treeAlgos
 import heap.DS as heapDs
 import heap.alg as heapAlgos
 import matrix.alg as matrixAlgos
+import graphs.Undirected as UndirectedGraphDS
+import graphs.Directed as DirectedGraphDS
+import graphs.UndirectedAL as UndirectedGraphALDS
+import graphs.DirectedAL as DirectedGraphALDS
+import graphs.alg as GraphAlgos
+
 
 def main():
     k = 5
@@ -155,7 +161,7 @@ def main():
     bst.add(4)
     bst.add(10)
     bst.add(15)
-    
+
     bst2 = treeDs.BST()
     bst2.add(5)
     bst2.add(2)
@@ -164,7 +170,6 @@ def main():
     bst2.add(3)
     bst2.add(6)
     bst2.add(8)
-
 
     # print(bst.root)
     # treeAlgos.preorder(bst.root)
@@ -221,9 +226,55 @@ def main():
     # res = matrixAlgos.searchIn2DArray(nonOverlapping2DArray, 1)
     # res = matrixAlgos.searchIn2DArray([[1,2,3], [4,5,6]], 1)
     # res = matrixAlgos.setMatrixZeros([[0,1,2,0],[3,4,5,2],[1,3,1,5]])
-    res = matrixAlgos.rotateImage([[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]])
-    print(res)
+    # res = matrixAlgos.rotateImage([[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]])
+    # print(res)
 
+    # vertexMap = {
+    #     0: "Kashmir",
+    #     1: "Jammu",
+    #     2: "Ladakh",
+    #     3: "Delhi",
+    # }
+
+    # udGraph = UndirectedGraphDS.UndirectedGraph(vertexMap, len(vertexMap))
+    # udGraph.add(0,1)
+    # udGraph.add(0,2)
+    # udGraph.add(1,3)
+
+    # udGraph.print()
+
+    vertexMap = {
+        0: "Kashmir",
+        1: "Jammu",
+        2: "Ladakh",
+        3: "Delhi",
+    }
+
+    # dGraph = DirectedGraphDS.DirectedGraph(vertexMap, len(vertexMap))
+    # dGraph.add(0,1)
+    # dGraph.add(0,2)
+    # dGraph.add(1,3)
+
+    # dGraph.print()
+
+    dGraph = UndirectedGraphALDS.UndirectedGraphAL(vertexMap, len(vertexMap))
+    dGraph.add(0,1)
+    dGraph.add(0,2)
+    dGraph.add(2,3)
+
+    # dGraph.print()
+
+    # dGraph = DirectedGraphALDS.DirectedGraphAL(vertexMap, len(vertexMap))
+    # dGraph.add(0, 1)
+    # dGraph.add(0, 2)
+    # dGraph.add(1, 3)
+
+    # dGraph.print()
+
+    # res = GraphAlgos.dfsTraversal(dGraph.adjacencyList)
+    # res = GraphAlgos.bfsTraversal(dGraph.adjacencyList)
+    res = GraphAlgos.connectedComponents(dGraph.adjacencyList)
+    print(res)
 
 
 if __name__ == "__main__":
